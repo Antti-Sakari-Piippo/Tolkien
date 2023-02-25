@@ -8,7 +8,7 @@
 $primary-color: #013536;
 $footer-color: #002526;
 $gap: 6.125rem;
-$project-width: min(1300px, 85%);
+$project-width: min(81.25rem, 85%);
 $gap: 2.5rem;
 $section-space: 8rem;
 
@@ -83,7 +83,7 @@ h3 {
 .grid-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 200px);
+    grid-template-columns: repeat(auto-fit, 12.5rem);
     grid-template-columns: 1fr 1fr;
     place-items: center;
     margin-left: auto;
@@ -100,7 +100,7 @@ p {
     padding-bottom: 1.2rem;
     font-size: 1.25rem;
     line-height: 1.3;
-    max-width: 830px;
+    max-width: 51.875rem;
     letter-spacing: 1px;
 }
 p.image-text {
@@ -108,8 +108,8 @@ p.image-text {
 }
 
 .book {
-    width: 230px;
-    height: 375px;
+    width: 14.375rem;
+    height: 23.4375rem;
 }
 
 .flex {
@@ -161,15 +161,15 @@ section.header {
         right: 0;
         background-image: url(images/artwork/bilbo_comes_to_the_huts_of_the_raft-elves__the_tolkien_estate_limited_1937\ 2_medium.png);
         display: flex;
-        height: 1200px;
+        height: 75rem;
         justify-content: space-between;
         align-items: center;
 
         nav {
-            width: min(1300px, 80%);
+            width: min(81.25rem, 80%);
             position: absolute;
             background-color: rgba($color: $primary-color, $alpha: 0.95);
-            height: 200px;
+            height: 12.5rem;
             align-items: center;
             display: flex;
             justify-content: space-between;
@@ -202,7 +202,7 @@ section.header {
 }
 
 .header::after {
-    height: 258px !important;
+    height: 16.125rem !important;
 }
 
 section.introduction {
@@ -224,7 +224,7 @@ section.introduction {
             margin-left: auto;
             .introduction__container__left_img_text {
                 img {
-                    height: 420px;
+                    height: 26.25rem;
                     max-width: 77vw;
                     border-radius: 1rem;
                     margin-top: 0.7rem;
@@ -262,7 +262,7 @@ section.books {
 section.legacy {
     .project-container.grid {
         img {
-            width: 500px;
+            width: 31.25rem;
             max-width: 90vw;
         }
         .legacy__text-area {
@@ -286,13 +286,13 @@ section.footer#footer {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
     .project-container {
-        height: 280px;
+        height: 17.5rem;
         grid-template-columns: 1fr 1fr 1fr;
         align-items: baseline;
         gap: 4rem;
         .footer__social {
             img {
-                width: 36px;
+                width: 2.25rem;
                 aspect-ratio: unset;
                 object-fit: contain;
                 margin-right: 1.1rem;
@@ -398,7 +398,7 @@ section.footer#footer {
         top: 9rem;
     }
     body .header .top-bg {
-        height: 1508px;
+        height: 94.25rem;
     }
     body .header {
         margin-bottom: 13.4rem;
@@ -432,7 +432,7 @@ section.footer#footer {
         height: 59rem;
     }
     .top-bg {
-        height: 12000px;
+        height: 750rem;
     }
 
     .introduction__container {
@@ -460,7 +460,7 @@ section.footer#footer {
             display: none;
         }
         img {
-            width: 45px;
+            width: 2.8125rem;
         }
     }
 }
