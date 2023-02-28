@@ -144,8 +144,6 @@ p.image-text {
 .project-container {
     gap: 2rem;
     width: $project-width;
-    // margin-left: auto;
-    // margin-right: auto;
     margin-inline: auto;
     align-items: flex-start;
     p,
@@ -457,8 +455,6 @@ section.footer#footer {
     }
     .footer_social__container {
         margin-bottom: 2.6rem;
-        // margin-left: 0;
-        // margin-right: 0;
         margin-inline: 0;
         width: 100%;
         display: grid;
