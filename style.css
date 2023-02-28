@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -84,13 +86,12 @@ h3 {
 }
 
 .grid-container {
-  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-columns: repeat(auto-fit, 12.5rem);
   grid-template-columns: 1fr 1fr;
+  width: 100%;
   place-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   gap: 2.5rem;
   align-items: flex-start;
 }
@@ -105,7 +106,7 @@ p {
   padding-bottom: 1.2rem;
   font-size: 1.25rem;
   line-height: 1.3;
-  max-width: 830px;
+  max-width: 51.875rem;
   letter-spacing: 1px;
 }
 
@@ -114,8 +115,8 @@ p.image-text {
 }
 
 .book {
-  width: 230px;
-  height: 375px;
+  width: 14.375rem;
+  height: 23.4375rem;
 }
 
 .flex {
@@ -146,10 +147,13 @@ p.image-text {
 
 .project-container {
   gap: 2rem;
-  width: min(1300px, 85%);
-  margin-left: auto;
-  margin-right: auto;
+  width: min(81.25rem, 90%);
+  margin-inline: auto;
   align-items: flex-start;
+}
+.project-container p,
+.project-container h3 {
+  max-width: 90vw;
 }
 
 section.header {
@@ -168,15 +172,15 @@ section.header .top-bg {
   right: 0;
   background-image: url(images/artwork/bilbo_comes_to_the_huts_of_the_raft-elves__the_tolkien_estate_limited_1937\ 2_medium.png);
   display: flex;
-  height: 1200px;
+  height: 75rem;
   justify-content: space-between;
   align-items: center;
 }
 section.header .top-bg nav {
-  width: min(1300px, 80%);
+  width: min(81.25rem, 80%);
   position: absolute;
   background-color: rgba(1, 53, 54, 0.95);
-  height: 200px;
+  height: 12.5rem;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -203,7 +207,7 @@ section.header .top-bg nav .project-container ul li:hover {
 }
 
 .header::after {
-  height: 258px !important;
+  height: 16.125rem !important;
 }
 
 section.introduction {
@@ -214,7 +218,7 @@ section.introduction {
 }
 section.introduction .introduction__container {
   background-color: rgba(1, 53, 54, 0.8);
-  padding: 3rem;
+  padding: 4.2rem 3rem 3rem 3rem;
   position: relative;
   align-items: flex-start;
   display: flex;
@@ -223,12 +227,8 @@ section.introduction .introduction__container {
   gap: 4rem;
   border-radius: 4rem;
 }
-section.introduction .introduction__container .introduction__container__left {
-  margin-left: auto;
-}
 section.introduction .introduction__container .introduction__container__left .introduction__container__left_img_text img {
-  height: 420px;
-  max-width: 77vw;
+  height: 27.85rem;
   border-radius: 1rem;
   margin-top: 0.7rem;
 }
@@ -237,11 +237,10 @@ section.introduction .introduction__container .introduction__container__left .in
   width: fit-content;
 }
 section.introduction .introduction__container .introduction__container__left p {
-  width: 25ch;
+  width: 31ch;
 }
 section.introduction .introduction__container .introduction__container__right {
   width: 60ch;
-  margin-right: auto;
   z-index: 9999;
 }
 section.introduction .introduction__container .introduction__container__right p {
@@ -256,11 +255,12 @@ section.books .project-container .books__text-area {
 }
 section.books .project-container .books__images {
   gap: 1rem;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 
 section.legacy .project-container.grid img {
-  width: 500px;
-  max-width: 90vw;
+  width: 31.25rem;
 }
 section.legacy .project-container.grid .legacy__text-area {
   grid-row: 1;
@@ -280,13 +280,13 @@ section.footer#footer {
   padding-bottom: 3.5rem;
 }
 section.footer#footer .project-container {
-  height: 280px;
+  height: 17.5rem;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: baseline;
   gap: 4rem;
 }
 section.footer#footer .project-container .footer__social img {
-  width: 36px;
+  width: 2.25rem;
   aspect-ratio: unset;
   -o-object-fit: contain;
      object-fit: contain;
@@ -331,17 +331,22 @@ section.footer#footer .project-container div.footer__navigate ul li {
 @media only screen and (max-width: 53.125em) {
   .introduction__container__left {
     flex-direction: column;
-    margin-left: auto !important;
-    margin-right: auto;
+    max-width: 90vw;
+  }
+  .introduction__container__right {
+    max-width: 90vw;
+  }
+}
+@media only screen and (max-width: 25em) {
+  section.footer#footer .project-container div.footer__navigate .grid-container {
+    grid-template-columns: 1fr !important;
   }
 }
 @media only screen and (max-width: 41.25em) {
-  h3,
-  p {
-    width: 85%;
-  }
-  .introduction__container__left_img_text {
-    width: 100%;
+  .introduction__container {
+    padding-inline: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   body section.footer .project-container.grid {
     grid-template-columns: 1fr !important;
@@ -355,14 +360,20 @@ section.footer#footer .project-container div.footer__navigate ul li {
   body section.books {
     padding-top: 20rem;
   }
+  img:not(.footer__social img, img.book) {
+    width: 100% !important;
+  }
 }
 @media only screen and (max-width: 68.75em) {
   .introduction__container__left {
-    margin-left: unset !important;
     width: 100%;
   }
+  .introduction__container__left_img_text,
+  .introduction__container__left_img_text img {
+    width: 100% !important;
+  }
   .introduction__container__left p {
-    width: 100%;
+    width: 100% !important;
   }
   .introduction__container {
     flex-direction: column;
@@ -383,7 +394,7 @@ section.footer#footer .project-container div.footer__navigate ul li {
     top: 9rem;
   }
   body .header .top-bg {
-    height: 1508px;
+    height: 94.25rem;
   }
   body .header {
     margin-bottom: 13.4rem;
@@ -417,7 +428,7 @@ section.footer#footer .project-container div.footer__navigate ul li {
     height: 59rem;
   }
   .top-bg {
-    height: 12000px;
+    height: 750rem;
   }
   .introduction__container {
     border-radius: 0 !important;
@@ -429,8 +440,7 @@ section.footer#footer .project-container div.footer__navigate ul li {
   }
   .footer_social__container {
     margin-bottom: 2.6rem;
-    margin-left: 0;
-    margin-right: 0;
+    margin-inline: 0;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -442,7 +452,7 @@ section.footer#footer .project-container div.footer__navigate ul li {
     display: none;
   }
   section.footer#footer .project-container .footer__social .footer_social__container .footer__social__elem img {
-    width: 45px;
+    width: 2.8125rem;
   }
 }
 @media only screen and (max-width: 40em) {
