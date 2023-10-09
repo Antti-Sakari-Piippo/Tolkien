@@ -89,8 +89,6 @@ h3 {
     grid-template-columns: 1fr 1fr;
     width: 100%;
     place-items: center;
-    // margin-left: auto;
-    // margin-right: auto;
     margin-inline: auto;
     gap: $gap;
     align-items: flex-start;
@@ -125,7 +123,7 @@ p.image-text {
 
 .project-bg {
     position: relative;
-    background-image: url(/images/artwork/bilbo_comes_to_the_huts_of_the_raft-elves__the_tolkien_estate_limited_1937\ 2.png);
+    background-image: url(/images/artwork/bilbo_comes_to_the_huts_of_the_raft-elves__the_tolkien_estate_limited_1937\ 2.webp);
     background-repeat: no-repeat;
     width: 100%;
     z-index: 1;
@@ -165,7 +163,7 @@ section.header {
         bottom: 0;
         left: 0;
         right: 0;
-        background-image: url(images/artwork/bilbo_comes_to_the_huts_of_the_raft-elves__the_tolkien_estate_limited_1937\ 2_medium.png);
+        background-image: url(images/artwork/bilbo_comes_to_the_huts_of_the_raft-elves__the_tolkien_estate_limited_1937\ 2_medium.webp);
         display: flex;
         height: 75rem;
         justify-content: space-between;
