@@ -23,6 +23,14 @@ body {
   overflow-x: hidden;
 }
 
+/* Style for focused elements */
+:focus {
+  outline: 2px solid transparent; /* Set an initial transparent outline */
+  box-shadow: 0 0 0 3px white; /* Add a box shadow to create padding */
+  transition: outline 0.3s ease; /* Add a transition for the outline */
+  /* Add other styling as needed */
+}
+
 a {
   text-decoration: none;
   font-size: 1.4rem;
