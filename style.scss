@@ -5,6 +5,7 @@ $gap: 6.125rem;
 $project-width: min(81.25rem, 90%);
 $gap: 2.5rem;
 $section-space: 8rem;
+$hover-animation-time: 0.25s;
 
 *,
 *::before,
@@ -36,7 +37,52 @@ a {
     font-size: 1.4rem;
     letter-spacing: 1px;
     display: block;
+    position: relative;
+    width: fit-content;
 }
+
+// a:hover underline
+.footer__social__row img:hover + a,
+a:hover {
+    // position: relative;
+    text-decoration: none;
+    width: fit-content;
+}
+
+a::before,
+.footer__social__row img + a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px; /* Adjust the thickness of the underline */
+    background-color: white;
+    transform: scaleX(0); /* Initial scale for animation */
+    transform-origin: center;
+    transition: transform $hover-animation-time ease;
+}
+
+a:hover::before,
+.footer__social__row:hover .hover-target::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(1);
+    transform-origin: center;
+    transition: transform $hover-animation-time ease;
+}
+
+.footer__social__row:hover a::before,
+.footer__social__row:hover .hover-target::before {
+    transform: scaleX(1);
+}
+
+///
 
 .grid {
     display: grid;
@@ -192,9 +238,6 @@ section.header {
                         a {
                             font-size: 1.8rem;
                         }
-                        &:hover {
-                            font-weight: bold;
-                        }
                     }
                 }
             }
@@ -304,6 +347,7 @@ section.footer#footer {
                 margin: 1.6rem 0;
                 cursor: pointer;
             }
+            /* When hovering over the <img> tag, show the <a> tag */
         }
         div.footer__navigate {
             align-items: flex-start;

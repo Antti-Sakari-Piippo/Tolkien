@@ -28,6 +28,49 @@ a {
   font-size: 1.4rem;
   letter-spacing: 1px;
   display: block;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.footer__social__row img:hover + a,
+a:hover {
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+a::before,
+.footer__social__row img + a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px; /* Adjust the thickness of the underline */
+  background-color: white;
+  transform: scaleX(0); /* Initial scale for animation */
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+a:hover::before,
+.footer__social__row:hover .hover-target::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(1);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.footer__social__row:hover a::before,
+.footer__social__row:hover .hover-target::before {
+  transform: scaleX(1);
 }
 
 .grid {
@@ -202,9 +245,6 @@ section.header .top-bg nav .project-container ul {
 section.header .top-bg nav .project-container ul li a {
   font-size: 1.8rem;
 }
-section.header .top-bg nav .project-container ul li:hover {
-  font-weight: bold;
-}
 
 .header::after {
   height: 16.125rem !important;
@@ -284,6 +324,9 @@ section.footer#footer .project-container {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: baseline;
   gap: 4rem;
+}
+section.footer#footer .project-container .footer__social {
+  /* When hovering over the <img> tag, show the <a> tag */
 }
 section.footer#footer .project-container .footer__social img {
   width: 2.25rem;
