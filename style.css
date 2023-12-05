@@ -5,7 +5,27 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Kotta One", serif;
-  color: #ffffff;
+  color: hsl(0, 0%, 95%);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #013536;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .wrapper {
@@ -112,13 +132,16 @@ img {
   margin-bottom: 0;
 }
 
+.from-to {
+  font-size: 1rem;
+}
+
 section:not(section.header, section.introduction) {
   padding-top: 8rem;
 }
 
 h1 {
   font-size: 6rem;
-  margin-bottom: 1rem;
 }
 
 h2 {
@@ -185,7 +208,7 @@ p.image-text {
 .project-bg::before {
   content: "";
   position: absolute;
-  background-color: rgba(1, 53, 54, 0.7);
+  background-color: rgba(1, 53, 54, 0.8);
   top: 0;
   left: 0;
   right: 0;
@@ -329,9 +352,6 @@ section.footer#footer .project-container {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: baseline;
   gap: 4rem;
-}
-section.footer#footer .project-container .footer__social {
-  /* When hovering over the <img> tag, show the <a> tag */
 }
 section.footer#footer .project-container .footer__social img {
   width: 2.25rem;

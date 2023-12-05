@@ -14,8 +14,30 @@ $hover-animation-time: 0.25s;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Kotta One', serif;
-    color: #ffffff;
+    color: hsl(0, 0%, 95%);
 }
+
+// Scrollbar
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $primary-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+//
 
 .wrapper {
     min-height: 100vh;
@@ -117,13 +139,16 @@ img {
     margin-bottom: 0;
 }
 
+.from-to {
+    font-size: 1rem;
+}
+
 section:not(section.header, section.introduction) {
     padding-top: $section-space;
 }
 
 h1 {
     font-size: 6rem;
-    margin-bottom: 1rem;
 }
 h2 {
     text-align: center;
@@ -183,7 +208,7 @@ p.image-text {
 .project-bg::before {
     content: '';
     position: absolute;
-    background-color: rgba($color: $primary-color, $alpha: 0.7);
+    background-color: rgba($color: $primary-color, $alpha: 0.8);
     top: 0;
     left: 0;
     right: 0;
@@ -353,7 +378,6 @@ section.footer#footer {
                 margin: 1.6rem 0;
                 cursor: pointer;
             }
-            /* When hovering over the <img> tag, show the <a> tag */
         }
         div.footer__navigate {
             align-items: flex-start;
