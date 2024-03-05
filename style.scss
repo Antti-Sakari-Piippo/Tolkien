@@ -286,10 +286,6 @@ section.header {
     }
 }
 
-.header::after {
-    height: 16.125rem !important;
-}
-
 // Introduction section
 section.introduction {
     height: 63rem;
@@ -439,6 +435,7 @@ section.footer#footer {
 }
 
 @media only screen and (max-width: 25em) {
+    //400px
     section.footer#footer .project-container div.footer__navigate .grid-container {
         grid-template-columns: 1fr !important;
     }

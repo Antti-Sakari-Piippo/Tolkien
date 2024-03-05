@@ -274,10 +274,6 @@ section.header .top-bg nav .project-container ul li a {
   font-size: 1.8rem;
 }
 
-.header::after {
-  height: 16.125rem !important;
-}
-
 section.introduction {
   height: 63rem;
   display: flex;
