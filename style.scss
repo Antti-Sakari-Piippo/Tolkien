@@ -17,6 +17,77 @@ $hover-animation-time: 0.25s;
     color: hsl(0, 0%, 95%);
 }
 
+body {
+    background-color: $primary-color;
+    overflow-x: hidden;
+}
+
+// Utilities and uniques
+.grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 12.5rem);
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    place-items: center;
+    margin-inline: auto;
+    gap: $gap;
+    align-items: flex-start;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.object-fit-none {
+    object-fit: none;
+    aspect-ratio: 1.5/2;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+}
+
+.book {
+    width: 14.375rem;
+    height: 23.4375rem;
+}
+
+.text-area {
+    margin-bottom: 4rem;
+}
+
+.artwork__image {
+    margin-bottom: 4rem;
+}
+
+.image-text {
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    max-width: 100%;
+    font-size: 1rem;
+}
+
+.from-to {
+    font-size: 1rem;
+}
+
+section:not(section.header, section.introduction) {
+    padding-top: $section-space;
+}
+
+// resets and defaults
+
 // Scrollbar
 /* width */
 ::-webkit-scrollbar {
@@ -38,22 +109,6 @@ $hover-animation-time: 0.25s;
     background: #555;
 }
 //
-
-.wrapper {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-}
-
-img {
-    border-radius: 0.2rem;
-}
-
-body {
-    background-color: $primary-color;
-    overflow-x: hidden;
-}
-
 // tab focus
 :focus {
     outline: 2px solid transparent;
@@ -72,7 +127,6 @@ a {
 // a:hover underline
 .footer__social__row img:hover + a,
 a:hover {
-    // position: relative;
     text-decoration: none;
     width: fit-content;
 }
@@ -110,43 +164,8 @@ a:hover::before,
     transform: scaleX(1);
 }
 
-///
-
-.grid {
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr 1fr;
-}
-.object-fit-none {
-    object-fit: none;
-    aspect-ratio: 1.5/2;
-}
-.text-area {
-    margin-bottom: 4rem;
-}
-.artwork__image {
-    margin-bottom: 4rem;
-}
-
 ul {
     list-style-type: none;
-}
-img {
-    object-fit: cover;
-}
-.image-text {
-    margin-top: 0.3rem;
-    margin-bottom: 0;
-    max-width: 100%;
-    font-size: 1rem;
-}
-
-.from-to {
-    font-size: 1rem;
-}
-
-section:not(section.header, section.introduction) {
-    padding-top: $section-space;
 }
 
 h1,
@@ -167,21 +186,13 @@ h3 {
     padding-bottom: 0.6rem;
     letter-spacing: 2px;
 }
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 12.5rem);
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    place-items: center;
-    margin-inline: auto;
-    gap: $gap;
-    align-items: flex-start;
-}
+
 h4 {
     font-size: 1.6rem;
     margin-bottom: 1.6rem;
     letter-spacing: 2px;
 }
+
 p {
     padding-bottom: 1.2rem;
     font-size: 1.25rem;
@@ -190,16 +201,9 @@ p {
     letter-spacing: 1px;
 }
 
-.book {
-    width: 14.375rem;
-    height: 23.4375rem;
-}
-
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: $gap;
+img {
+    object-fit: cover;
+    border-radius: 0.2rem;
 }
 
 .project-bg {
@@ -209,6 +213,7 @@ p {
     width: 100%;
     z-index: 1;
 }
+
 .project-bg::before {
     content: '';
     position: absolute;
@@ -231,6 +236,7 @@ p {
     }
 }
 
+// Header section
 section.header {
     display: flex;
     justify-content: space-between;
@@ -284,6 +290,7 @@ section.header {
     height: 16.125rem !important;
 }
 
+// Introduction section
 section.introduction {
     height: 63rem;
     display: flex;
@@ -323,6 +330,8 @@ section.introduction {
         }
     }
 }
+
+// Books section
 section.books {
     .project-container {
         align-items: center;
@@ -337,6 +346,8 @@ section.books {
         }
     }
 }
+
+// Legacy section
 section.legacy {
     .project-container.grid {
         img {
@@ -347,6 +358,8 @@ section.legacy {
         }
     }
 }
+
+// Artwork section
 section.artwork {
     img {
         width: 100%;
@@ -356,6 +369,8 @@ section.artwork {
         width: 100%;
     }
 }
+
+// Footer section
 section.footer#footer {
     background-color: $footer-color;
     background-color: rgba($color: $footer-color, $alpha: 0.85);
@@ -401,6 +416,8 @@ section.footer#footer {
         }
     }
 }
+
+// Media queries
 @media only screen and (max-width: 81.25em) {
     //1300px
     .introduction .project-container {
