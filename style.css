@@ -55,16 +55,16 @@ body {
 }
 
 .text-area {
-  margin-bottom: 4rem;
+  margin-block-end: 4rem;
 }
 
 .artwork__image {
-  margin-bottom: 4rem;
+  margin-block-end: 4rem;
 }
 
 .image-text {
-  margin-top: 0.3rem;
-  margin-bottom: 0;
+  margin-block-start: 0.3rem;
+  margin-block-end: 0;
   max-width: 100%;
   font-size: 1rem;
 }
@@ -74,7 +74,7 @@ body {
 }
 
 section:not(section.header, section.introduction) {
-  padding-top: 8rem;
+  padding-block-start: 8rem;
 }
 
 /* width */
@@ -168,23 +168,23 @@ h1 {
 h2 {
   text-align: center;
   font-size: 4rem;
-  margin-bottom: 4rem;
+  margin-block-end: 4rem;
 }
 
 h3 {
   font-size: 2.1rem;
-  padding-bottom: 0.6rem;
+  padding-block-end: 0.6rem;
   letter-spacing: 2px;
 }
 
 h4 {
   font-size: 1.6rem;
-  margin-bottom: 1.6rem;
+  margin-block-end: 1.6rem;
   letter-spacing: 2px;
 }
 
 p {
-  padding-bottom: 1.2rem;
+  padding-block-end: 1.2rem;
   font-size: 1.25rem;
   line-height: 1.3;
   max-width: 51.875rem;
@@ -294,7 +294,7 @@ section.introduction .introduction__container {
 section.introduction .introduction__container .introduction__container__left .introduction__container__left_img_text img {
   height: 27.85rem;
   border-radius: 1rem;
-  margin-top: 0.7rem;
+  margin-block-start: 0.7rem;
 }
 section.introduction .introduction__container .introduction__container__left .introduction__container__left_img_text p {
   width: -moz-fit-content;
@@ -308,14 +308,14 @@ section.introduction .introduction__container .introduction__container__right {
   z-index: 9999;
 }
 section.introduction .introduction__container .introduction__container__right p {
-  padding-bottom: 1.8rem;
+  padding-block-end: 1.8rem;
 }
 
 section.books .project-container {
   align-items: center;
 }
 section.books .project-container .books__text-area {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 section.books .project-container .books__images {
   gap: 1rem;
@@ -335,7 +335,7 @@ section.artwork img {
   width: 100%;
 }
 section.artwork .artwork__image__large {
-  margin-bottom: 6rem;
+  margin-block-end: 6rem;
   width: 100%;
 }
 
@@ -355,7 +355,7 @@ section.footer#footer .project-container .footer__social img {
   aspect-ratio: unset;
   -o-object-fit: contain;
      object-fit: contain;
-  margin-right: 1.1rem;
+  margin-inline-end: 1.1rem;
 }
 section.footer#footer .project-container .footer__social a {
   display: flex;
@@ -376,13 +376,13 @@ section.footer#footer .project-container div.footer__navigate .grid-container {
   place-items: baseline;
 }
 section.footer#footer .project-container div.footer__navigate ul {
-  margin-bottom: 2rem;
+  margin-block-end: 2rem;
   width: -moz-fit-content;
   width: fit-content;
   white-space: nowrap;
 }
 section.footer#footer .project-container div.footer__navigate ul li {
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
 }
 
 @media only screen and (max-width: 81.25em) {
@@ -390,7 +390,7 @@ section.footer#footer .project-container div.footer__navigate ul li {
     width: 100%;
   }
   section.footer#footer {
-    padding-bottom: 7rem;
+    padding-block-end: 7rem;
   }
 }
 @media only screen and (max-width: 53.125em) {
@@ -410,20 +410,20 @@ section.footer#footer .project-container div.footer__navigate ul li {
 @media only screen and (max-width: 41.25em) {
   .introduction__container {
     padding-inline: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-inline-start: 0 !important;
+    padding-inline-end: 0 !important;
   }
   body section.footer .project-container.grid {
     grid-template-columns: 1fr !important;
   }
   section.footer#footer {
-    padding-bottom: 46rem !important;
+    padding-block-end: 46rem !important;
   }
   body .header {
-    margin-bottom: 30.4rem !important;
+    margin-block-end: 30.4rem !important;
   }
   body section.books {
-    padding-top: 20rem;
+    padding-block-start: 20rem;
   }
   img:not(.footer__social img, img.book) {
     width: 100% !important;
@@ -462,8 +462,8 @@ section.footer#footer .project-container div.footer__navigate ul li {
     height: 94.25rem;
   }
   body .header {
-    margin-bottom: 13.4rem;
-    padding-top: 13rem;
+    margin-block-end: 13.4rem;
+    padding-block-start: 13rem;
   }
   .grid-container,
   .grid {
@@ -481,13 +481,13 @@ section.footer#footer .project-container div.footer__navigate ul li {
     width: 100%;
   }
   .books__images {
-    margin-top: 3rem;
+    margin-block-start: 3rem;
   }
   .artwork__text-area.text-area {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
   section.footer#footer {
-    padding-bottom: 21.5rem;
+    padding-block-end: 21.5rem;
   }
   section.introduction {
     height: 59rem;
@@ -504,7 +504,7 @@ section.footer#footer .project-container div.footer__navigate ul li {
     grid-template-columns: 1fr;
   }
   .footer_social__container {
-    margin-bottom: 2.6rem;
+    margin-block-end: 2.6rem;
     margin-inline: 0;
     width: 100%;
     display: grid;
@@ -525,6 +525,6 @@ section.footer#footer .project-container div.footer__navigate ul li {
     display: block;
   }
   section.header .top-bg nav .project-container ul li {
-    margin-bottom: 0.5rem;
+    margin-block-end: 0.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
