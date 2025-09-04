@@ -23,7 +23,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, 12.5rem);
   grid-template-columns: 1fr 1fr;
-  width: 100%;
+  inline-size: 100%;
   place-items: center;
   margin-inline: auto;
   gap: 2.5rem;
@@ -50,8 +50,8 @@ body {
 }
 
 .book {
-  width: 14.375rem;
-  height: 23.4375rem;
+  inline-size: 14.375rem;
+  block-size: 23.4375rem;
 }
 
 .text-area {
@@ -201,7 +201,7 @@ img {
   position: relative;
   background-image: url(/images/artwork/bilbo_comes_to_the_huts_of_the_raft-elves__the_tolkien_estate_limited_1937\ 2.webp);
   background-repeat: no-repeat;
-  width: 100%;
+  inline-size: 100%;
   z-index: 1;
 }
 
@@ -218,13 +218,13 @@ img {
 
 .project-container {
   gap: 2rem;
-  width: min(81.25rem, 90%);
+  inline-size: min(81.25rem, 90%);
   margin-inline: auto;
   align-items: flex-start;
 }
 .project-container p,
 .project-container h3 {
-  max-width: 90vw;
+  max-inline-size: 90vw;
 }
 
 section.header {
@@ -243,19 +243,19 @@ section.header .top-bg {
   right: 0;
   background-image: url("images/artwork/bilbo_comes_to_the_huts_of_the_raft-elves__the_tolkien_estate_limited_1937 2_medium.webp");
   display: flex;
-  height: 75rem;
+  block-size: 75rem;
   justify-content: space-between;
   align-items: center;
 }
 section.header .top-bg nav {
-  width: min(81.25rem, 80%);
+  inline-size: min(81.25rem, 80%);
   position: absolute;
   background-color: rgba(1, 53, 54, 0.95);
-  height: 12.5rem;
+  block-size: 12.5rem;
   align-items: center;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  inline-size: 100%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -275,7 +275,7 @@ section.header .top-bg nav .project-container ul li a {
 }
 
 section.introduction {
-  height: 63rem;
+  block-size: 63rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -292,19 +292,19 @@ section.introduction .introduction__container {
   border-radius: 4rem;
 }
 section.introduction .introduction__container .introduction__container__left .introduction__container__left_img_text img {
-  height: 27.85rem;
+  block-size: 27.85rem;
   border-radius: 1rem;
   margin-block-start: 0.7rem;
 }
 section.introduction .introduction__container .introduction__container__left .introduction__container__left_img_text p {
-  width: -moz-fit-content;
-  width: fit-content;
+  inline-size: -moz-fit-content;
+  inline-size: fit-content;
 }
 section.introduction .introduction__container .introduction__container__left p {
-  width: 31ch;
+  inline-size: 31ch;
 }
 section.introduction .introduction__container .introduction__container__right {
-  width: 60ch;
+  inline-size: 60ch;
   z-index: 9999;
 }
 section.introduction .introduction__container .introduction__container__right p {
@@ -325,18 +325,18 @@ section.books .project-container .books__images {
 }
 
 section.legacy .project-container.grid img {
-  width: 31.25rem;
+  inline-size: 31.25rem;
 }
 section.legacy .project-container.grid .legacy__text-area {
   grid-row: 1;
 }
 
 section.artwork img {
-  width: 100%;
+  inline-size: 100%;
 }
 section.artwork .artwork__image__large {
   margin-block-end: 6rem;
-  width: 100%;
+  inline-size: 100%;
 }
 
 section.footer#footer {
@@ -345,13 +345,13 @@ section.footer#footer {
   padding-block: 3.5rem;
 }
 section.footer#footer .project-container {
-  height: 17.5rem;
+  block-size: 17.5rem;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: baseline;
   gap: 4rem;
 }
 section.footer#footer .project-container .footer__social img {
-  width: 2.25rem;
+  inline-size: 2.25rem;
   aspect-ratio: unset;
   -o-object-fit: contain;
      object-fit: contain;
@@ -377,8 +377,8 @@ section.footer#footer .project-container div.footer__navigate .grid-container {
 }
 section.footer#footer .project-container div.footer__navigate ul {
   margin-block-end: 2rem;
-  width: -moz-fit-content;
-  width: fit-content;
+  inline-size: -moz-fit-content;
+  inline-size: fit-content;
   white-space: nowrap;
 }
 section.footer#footer .project-container div.footer__navigate ul li {
@@ -387,7 +387,7 @@ section.footer#footer .project-container div.footer__navigate ul li {
 
 @media only screen and (max-width: 81.25em) {
   .introduction .project-container {
-    width: 100%;
+    inline-size: 100%;
   }
   section.footer#footer {
     padding-block-end: 7rem;
@@ -396,10 +396,10 @@ section.footer#footer .project-container div.footer__navigate ul li {
 @media only screen and (max-width: 53.125em) {
   .introduction__container__left {
     flex-direction: column;
-    max-width: 90vw;
+    max-inline-size: 90vw;
   }
   .introduction__container__right {
-    max-width: 90vw;
+    max-inline-size: 90vw;
   }
 }
 @media only screen and (max-width: 25em) {
@@ -426,19 +426,19 @@ section.footer#footer .project-container div.footer__navigate ul li {
     padding-block-start: 20rem;
   }
   img:not(.footer__social img, img.book) {
-    width: 100% !important;
+    inline-size: 100% !important;
   }
 }
 @media only screen and (max-width: 68.75em) {
   .introduction__container__left {
-    width: 100%;
+    inline-size: 100%;
   }
   .introduction__container__left_img_text,
   .introduction__container__left_img_text img {
-    width: 100% !important;
+    inline-size: 100% !important;
   }
   .introduction__container__left p {
-    width: 100% !important;
+    inline-size: 100% !important;
   }
   .introduction__container {
     flex-direction: column;
@@ -448,7 +448,7 @@ section.footer#footer .project-container div.footer__navigate ul li {
     z-index: 9999;
   }
   section.introduction .introduction__container__right {
-    width: 100% !important;
+    inline-size: 100% !important;
   }
   .introduction__container__left {
     display: flex;
@@ -459,7 +459,7 @@ section.footer#footer .project-container div.footer__navigate ul li {
     top: 9rem;
   }
   body .header .top-bg {
-    height: 94.25rem;
+    block-size: 94.25rem;
   }
   body .header {
     margin-block-end: 13.4rem;
@@ -478,7 +478,7 @@ section.footer#footer .project-container div.footer__navigate ul li {
     grid-template-columns: 1fr !important;
   }
   .footer__navigate {
-    width: 100%;
+    inline-size: 100%;
   }
   .books__images {
     margin-block-start: 3rem;
@@ -490,10 +490,10 @@ section.footer#footer .project-container div.footer__navigate ul li {
     padding-block-end: 21.5rem;
   }
   section.introduction {
-    height: 59rem;
+    block-size: 59rem;
   }
   .top-bg {
-    height: 750rem;
+    block-size: 750rem;
   }
   .introduction__container {
     border-radius: 0 !important;
@@ -506,18 +506,18 @@ section.footer#footer .project-container div.footer__navigate ul li {
   .footer_social__container {
     margin-block-end: 2.6rem;
     margin-inline: 0;
-    width: 100%;
+    inline-size: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
   .footer__social {
-    width: 100%;
+    inline-size: 100%;
   }
   section.footer#footer .project-container .footer__social .footer_social__container .footer__social__elem a {
     display: none;
   }
   section.footer#footer .project-container .footer__social .footer_social__container .footer__social__elem img {
-    width: 2.8125rem;
+    inline-size: 2.8125rem;
   }
 }
 @media only screen and (max-width: 40em) {

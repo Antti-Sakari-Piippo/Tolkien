@@ -33,7 +33,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, 12.5rem);
     grid-template-columns: 1fr 1fr;
-    width: 100%;
+    inline-size: 100%;
     place-items: center;
     margin-inline: auto;
     gap: $gap;
@@ -59,8 +59,8 @@ body {
 }
 
 .book {
-    width: 14.375rem;
-    height: 23.4375rem;
+    inline-size: 14.375rem;
+    block-size: 23.4375rem;
 }
 
 .text-area {
@@ -210,7 +210,7 @@ img {
     position: relative;
     background-image: url(/images/artwork/bilbo_comes_to_the_huts_of_the_raft-elves__the_tolkien_estate_limited_1937\ 2.webp);
     background-repeat: no-repeat;
-    width: 100%;
+    inline-size: 100%;
     z-index: 1;
 }
 
@@ -227,12 +227,12 @@ img {
 
 .project-container {
     gap: 2rem;
-    width: $project-width;
+    inline-size: $project-width;
     margin-inline: auto;
     align-items: flex-start;
     p,
     h3 {
-        max-width: 90vw;
+        max-inline-size: 90vw;
     }
 }
 
@@ -252,18 +252,18 @@ section.header {
         right: 0;
         background-image: url('images/artwork/bilbo_comes_to_the_huts_of_the_raft-elves__the_tolkien_estate_limited_1937 2_medium.webp');
         display: flex;
-        height: 75rem;
+        block-size: 75rem;
         justify-content: space-between;
         align-items: center;
         nav {
-            width: min(81.25rem, 80%);
+            inline-size: min(81.25rem, 80%);
             position: absolute;
             background-color: rgba($color: $primary-color, $alpha: 0.95);
-            height: 12.5rem;
+            block-size: 12.5rem;
             align-items: center;
             display: flex;
             justify-content: space-between;
-            width: 100%;
+            inline-size: 100%;
             top: 0;
             bottom: 0;
             left: 0;
@@ -288,7 +288,7 @@ section.header {
 
 // Introduction section
 section.introduction {
-    height: 63rem;
+    block-size: 63rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -305,20 +305,20 @@ section.introduction {
         .introduction__container__left {
             .introduction__container__left_img_text {
                 img {
-                    height: 27.85rem;
+                    block-size: 27.85rem;
                     border-radius: 1rem;
                     margin-block-start: 0.7rem;
                 }
                 p {
-                    width: fit-content;
+                    inline-size: fit-content;
                 }
             }
             p {
-                width: 31ch;
+                inline-size: 31ch;
             }
         }
         .introduction__container__right {
-            width: 60ch;
+            inline-size: 60ch;
             z-index: 9999;
             p {
                 padding-block-end: 1.8rem;
@@ -347,7 +347,7 @@ section.books {
 section.legacy {
     .project-container.grid {
         img {
-            width: 31.25rem;
+            inline-size: 31.25rem;
         }
         .legacy__text-area {
             grid-row: 1;
@@ -358,11 +358,11 @@ section.legacy {
 // Artwork section
 section.artwork {
     img {
-        width: 100%;
+        inline-size: 100%;
     }
     .artwork__image__large {
         margin-block-end: 6rem;
-        width: 100%;
+        inline-size: 100%;
     }
 }
 
@@ -372,13 +372,13 @@ section.footer#footer {
     background-color: rgba($color: $footer-color, $alpha: 0.85);
     padding-block: 3.5rem;
     .project-container {
-        height: 17.5rem;
+        block-size: 17.5rem;
         grid-template-columns: 1fr 1fr 1fr;
         align-items: baseline;
         gap: 4rem;
         .footer__social {
             img {
-                width: 2.25rem;
+                inline-size: 2.25rem;
                 aspect-ratio: unset;
                 object-fit: contain;
                 margin-inline-end: 1.1rem;
@@ -403,7 +403,7 @@ section.footer#footer {
             }
             ul {
                 margin-block-end: 2rem;
-                width: fit-content;
+                inline-size: fit-content;
                 white-space: nowrap;
                 li {
                     margin-block-end: 1rem;
@@ -417,7 +417,7 @@ section.footer#footer {
 @media only screen and (max-width: 81.25em) {
     //1300px
     .introduction .project-container {
-        width: 100%;
+        inline-size: 100%;
     }
     section.footer#footer {
         padding-block-end: 7rem;
@@ -427,10 +427,10 @@ section.footer#footer {
 @media only screen and (max-width: 53.125em) {
     .introduction__container__left {
         flex-direction: column;
-        max-width: 90vw;
+        max-inline-size: 90vw;
     }
     .introduction__container__right {
-        max-width: 90vw;
+        max-inline-size: 90vw;
     }
 }
 
@@ -460,22 +460,22 @@ section.footer#footer {
         padding-block-start: 20rem;
     }
     img:not(.footer__social img, img.book) {
-        width: 100% !important;
+        inline-size: 100% !important;
     }
 }
 
 @media only screen and (max-width: 68.75em) {
     //1100px
     .introduction__container__left {
-        width: 100%;
+        inline-size: 100%;
     }
 
     .introduction__container__left_img_text,
     .introduction__container__left_img_text img {
-        width: 100% !important;
+        inline-size: 100% !important;
     }
     .introduction__container__left p {
-        width: 100% !important;
+        inline-size: 100% !important;
     }
 
     .introduction__container {
@@ -486,7 +486,7 @@ section.footer#footer {
         z-index: 9999;
     }
     section.introduction .introduction__container__right {
-        width: 100% !important;
+        inline-size: 100% !important;
     }
 
     .introduction__container__left {
@@ -498,7 +498,7 @@ section.footer#footer {
         top: 9rem;
     }
     body .header .top-bg {
-        height: 94.25rem;
+        block-size: 94.25rem;
     }
     body .header {
         margin-block-end: 13.4rem;
@@ -517,7 +517,7 @@ section.footer#footer {
         grid-template-columns: 1fr !important;
     }
     .footer__navigate {
-        width: 100%;
+        inline-size: 100%;
     }
     .books__images {
         margin-block-start: 3rem;
@@ -529,10 +529,10 @@ section.footer#footer {
         padding-block-end: 21.5rem;
     }
     section.introduction {
-        height: 59rem;
+        block-size: 59rem;
     }
     .top-bg {
-        height: 750rem;
+        block-size: 750rem;
     }
 
     .introduction__container {
@@ -547,19 +547,19 @@ section.footer#footer {
     .footer_social__container {
         margin-block-end: 2.6rem;
         margin-inline: 0;
-        width: 100%;
+        inline-size: 100%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
     .footer__social {
-        width: 100%;
+        inline-size: 100%;
     }
     section.footer#footer .project-container .footer__social .footer_social__container .footer__social__elem {
         a {
             display: none;
         }
         img {
-            width: 2.8125rem;
+            inline-size: 2.8125rem;
         }
     }
 }
