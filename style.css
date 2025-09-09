@@ -108,8 +108,8 @@ a {
   letter-spacing: 1px;
   display: block;
   position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
+  inline-size: -moz-fit-content;
+  inline-size: fit-content;
 }
 
 .footer__social__row img:hover + a,
@@ -126,7 +126,7 @@ a::before,
   bottom: 0;
   left: 0;
   right: 0;
-  height: 2px; /* Adjust the thickness of the underline */
+  block-size: 2px; /* Adjust the thickness of the underline */
   background-color: white;
   transform: scaleX(0); /* Initial scale for animation */
   transform-origin: center;
@@ -140,7 +140,7 @@ a:hover::before,
   bottom: 0;
   left: 0;
   right: 0;
-  height: 2px;
+  block-size: 2px;
   background-color: white;
   transform: scaleX(1);
   transform-origin: center;
